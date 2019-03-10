@@ -2,7 +2,7 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 $color-grey-dark: #777;
-$color-primary-white: #fff;
+$color-white: #fff;
 
 *,
 *::after,
@@ -57,7 +57,7 @@ body {
 }
 
 .heading-primary {
-    color: $color-primary-white;
+    color: $color-white;
     text-transform: uppercase;
 
     /* animation shaking fix */
@@ -157,7 +157,7 @@ body {
 }
 
 .btn--white {
-    background-color: $color-primary-white;
+    background-color: $color-white;
     color: $color-grey-dark;
 }
 
@@ -175,7 +175,7 @@ body {
 }
 
 .btn--white::after {
-    background-color: $color-primary-white;
+    background-color: $color-white;
 }
 
 .btn:hover::after {
