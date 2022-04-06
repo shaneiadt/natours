@@ -19,10 +19,16 @@
     }
 
     &__left {
-        width: 33.333333%;
-        display: table-cell;
+        background: lightcoral;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: stretch;
+        height: 90vh;
     }
-    
+
     &__right {
         width: 66.666667%;
         display: table-cell;
@@ -31,12 +37,35 @@
     }
 
     &__img {
-        display: block;
-        width: 100%;
+
+        &1,
+        &2 {
+            order: 0;
+            flex: 1 1 auto;
+            align-self: auto;
+        }
+
+        &1 {
+            background-image: url(/img/nat-8.jpg);
+            background-size: cover;
+            background-position: bottom;
+        }
+        
+        &2 {
+            background-image: url(/img/nat-9.jpg);
+            background-size: cover;
+            background-position: bottom;
+        }
     }
 
     &__text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-light-2;
+
+        hyphens: auto;
     }
 }
