@@ -434,7 +434,23 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3000; }
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__close:link, .popup__close:visited {
+    color: #777;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block; }
+  .popup__close:hover {
+    color: #55c57a; }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -455,7 +471,7 @@ body {
     justify-content: flex-start;
     align-content: stretch;
     align-items: stretch;
-    height: 90vh; }
+    height: 75vh; }
   .popup__right {
     width: 66.666667%;
     display: table-cell;
