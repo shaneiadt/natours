@@ -10,12 +10,18 @@
     visibility: hidden;
     transition: all .3s;
 
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, 0.3);
+    }
+
     &:target {
         opacity: 1;
-        visibility: visible
+        visibility: visible;
     }
 
     &__close {
+
         &:link,
         &:visited {
             color: $color-grey-dark;
@@ -26,7 +32,7 @@
             text-decoration: none;
             display: inline-block;
 
-            @include respond(phone){
+            @include respond(phone) {
                 top: 14rem;
             }
         }
@@ -46,7 +52,7 @@
         overflow: hidden;
         position: relative;
 
-        @include respond(phone){
+        @include respond(phone) {
             display: block;
         }
     }
@@ -61,7 +67,7 @@
         align-items: stretch;
         height: 75vh;
 
-        @include respond(phone){
+        @include respond(phone) {
             width: 100%;
             flex-direction: row;
             height: 20vh;
@@ -89,7 +95,7 @@
             background-size: cover;
             background-position: bottom;
         }
-        
+
         &2 {
             background-image: url(/img/nat-9.jpg);
             background-size: cover;
