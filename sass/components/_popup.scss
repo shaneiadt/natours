@@ -25,6 +25,10 @@
             font-size: 3rem;
             text-decoration: none;
             display: inline-block;
+
+            @include respond(phone){
+                top: 14rem;
+            }
         }
 
         &:hover {
@@ -41,6 +45,10 @@
         display: table;
         overflow: hidden;
         position: relative;
+
+        @include respond(phone){
+            display: block;
+        }
     }
 
     &__left {
@@ -52,6 +60,12 @@
         align-content: stretch;
         align-items: stretch;
         height: 75vh;
+
+        @include respond(phone){
+            width: 100%;
+            flex-direction: row;
+            height: 20vh;
+        }
     }
 
     &__right {
